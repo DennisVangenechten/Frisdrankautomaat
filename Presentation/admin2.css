@@ -1,0 +1,240 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: auto; /* Allow scrolling */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.vending-machine {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.machine-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #b71c1c;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.drinks-container, .muntlade-section, .muntlade-vullen-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.drink {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.drink img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+.drink .input-number {
+    width: 60px;
+    text-align: center;
+}
+
+.drink button {
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.drink button:hover {
+    background-color: #cacaca;
+}
+
+.drink.uitgeput button {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.info {
+    color: white;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.coins-container, .change, .selected-drink {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.coins-container h2, .change h2, .selected-drink h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.coins-container ul, .change ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.coins-container ul li, .change ul li {
+    margin: 5px;
+}
+
+.coins-container button {
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.coins-container button:hover {
+    background-color: #cacaca;
+}
+
+.coins-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selected-drink img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.selected-drink p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.footer .logout-container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer label, .footer input, .footer button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.footer input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer button {
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: #cacaca;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vending-machine {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+}
